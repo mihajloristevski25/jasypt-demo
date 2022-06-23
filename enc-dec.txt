@@ -1,0 +1,12 @@
+ENCRYPTING WITH MAVEN
+Encrypt: mvn jasypt:encrypt-value "-Djasypt.encryptor.password=password" "-Djasypt.plugin.value=test"
+Decrypt:  mvn jasypt:decrypt-value "-Djasypt.encryptor.password=password" "-Djasypt.plugin.value=GzUs5gW9fYA0CSYm0DXWF4FzcCyXnsfCrE1Ss2Jk7vLr6vZhHOPYjLbrlwpbQKTW"
+
+
+
+ENCRYPTING WITH JAR FILE
+java -cp jasypt-1.9.3.jar org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI input=mihajlo password=passkey algorithm=PBEWithMD5AndDES
+
+
+Executing jar with java VM Arguments
+java -Xms256m -Xmx512m -Djasypt.encryptor.password=passkey -Djasypt.encryptor.algorithm=PBEWithMD5AndDES -jar jasypt-demo-0.0.1-SNAPSHOT.jar
